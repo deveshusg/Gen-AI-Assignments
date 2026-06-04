@@ -158,13 +158,6 @@ Workflow      Execution
         ▼
  Research Report
 ```
-
----
-
-# Architecture Diagram
-
-![Architecture Diagram](diagrams/architecture.png)
-
 ---
 
 # Technology Stack
