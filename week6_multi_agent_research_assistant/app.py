@@ -171,8 +171,10 @@ if submit:
                 f"🏁 Total Execution Time: {total_time:.2f} sec"
             )
 
-            status.write(
-                "✅ Direct Agent Execution Complete"
+            status.update(
+                label="✅ Direct Agent Execution Complete",
+                state="complete",
+                expanded=True
             )
 
             result = state
