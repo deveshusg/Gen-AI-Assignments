@@ -238,7 +238,7 @@ st.markdown(
     ### Developer
 
     Developed by **Devesh Gupta**
-
+    - 🌐 Live App: https://devesh-research-assistant.streamlit.app/
     - 🌐 GitHub: https://github.com/deveshusg
     - 💼 LinkedIn: https://www.linkedin.com/in/gupta-devesh/
 

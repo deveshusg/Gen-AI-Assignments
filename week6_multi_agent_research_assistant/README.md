@@ -1,25 +1,33 @@
 # 🔍 Multi-Agent Research Assistant
 
-Capstone Project for Week 6 of the Gen-AI Assignments series.
+### 🚀 Live Demo
+
+**Streamlit Application:**
+https://devesh-research-assistant.streamlit.app/
+
+---
+
+## Project Overview
 
 A Multi-Agent AI Research Assistant built using OpenAI, Tavily, LangGraph, LangChain, and Streamlit.
 
 The application accepts a research topic, performs web-based research using specialized AI agents, and generates a structured research report with references and downloadable PDF output.
 
+The project demonstrates how multiple AI agents can collaborate to solve a complex task by dividing responsibilities across planning, information retrieval, and summarization.
+
 ---
 
-# Project Overview
+## Live Application
 
-Traditional chatbots rely primarily on pre-trained knowledge and may not provide up-to-date information.
+👉 https://devesh-research-assistant.streamlit.app/
 
-This project demonstrates how multiple specialized AI agents can collaborate to:
+Try queries such as:
 
-* Understand a research topic
-* Create a research plan
-* Gather current information from the web
-* Generate a structured research report
-* Provide source references
-* Export reports as PDF documents
+* Future of Small Language Models
+* Impact of AI on Credit Risk Modeling
+* Future of Agentic AI
+* Applications of Generative AI in Banking
+* Autonomous AI Agents in Healthcare
 
 ---
 
@@ -27,23 +35,25 @@ This project demonstrates how multiple specialized AI agents can collaborate to:
 
 ## 🧠 Multi-Agent Architecture
 
-The system consists of three specialized AI agents.
+The application consists of three specialized AI agents.
 
 ### Planner Agent
 
 Responsibilities:
 
 * Understands the research topic
-* Breaks the topic into research tasks
-* Creates a structured research plan
+* Breaks the problem into research tasks
+* Creates a research plan
+* Defines research objectives
 
 ### Search Agent
 
 Responsibilities:
 
-* Searches the web using Tavily
-* Collects relevant information
-* Stores references and source links
+* Searches the web using Tavily Search
+* Collects current information
+* Retrieves relevant sources
+* Stores references and URLs
 
 ### Summarizer Agent
 
@@ -51,7 +61,8 @@ Responsibilities:
 
 * Synthesizes gathered information
 * Generates a structured report
-* Produces final insights and recommendations
+* Produces final insights
+* Organizes information into readable sections
 
 ---
 
@@ -90,9 +101,23 @@ This mode provides enhanced observability and debugging.
 
 ---
 
+## 📊 Execution Monitoring
+
+The application displays:
+
+* Planner Agent execution progress
+* Search Agent execution progress
+* Summarizer Agent execution progress
+* Individual execution times
+* Total workflow execution time
+
+This allows users to observe how the workflow executes in real time.
+
+---
+
 ## 📄 Research Report Generation
 
-The generated report includes:
+Generated reports include:
 
 * Executive Summary
 * Key Findings
@@ -110,8 +135,9 @@ All retrieved sources are displayed as clickable links.
 Users can:
 
 * Verify information
-* Explore original source material
-* Improve transparency and trust
+* Explore source material
+* Review original references
+* Improve trust and transparency
 
 ---
 
@@ -119,9 +145,9 @@ Users can:
 
 Generated reports can be downloaded as PDF documents.
 
-The exported PDF includes:
+The exported PDF contains:
 
-* Complete research report
+* Full research report
 * References section
 * Source URLs
 
@@ -157,7 +183,11 @@ Workflow      Execution
         │
         ▼
  Research Report
+        │
+        ▼
+ PDF Export
 ```
+
 ---
 
 # Technology Stack
@@ -167,7 +197,7 @@ Workflow      Execution
 | LLM                    | OpenAI GPT-4o Mini         |
 | Agent Framework        | LangGraph                  |
 | Agent Utilities        | LangChain                  |
-| Web Search             | Tavily                     |
+| Web Search             | Tavily Search              |
 | Frontend               | Streamlit                  |
 | PDF Generation         | ReportLab                  |
 | Environment Management | Python Virtual Environment |
@@ -177,7 +207,7 @@ Workflow      Execution
 # Project Structure
 
 ```text
-Week 6 - Capstone Project - Multi Agent Research Assistant
+week6_multi_agent_research_assistant
 │
 ├── agents
 │   ├── __init__.py
@@ -188,12 +218,7 @@ Week 6 - Capstone Project - Multi Agent Research Assistant
 │   └── summarizer.py
 │
 ├── data
-│   ├── research_report_1.txt
-│   ├── research_report_2.txt
-│   └── research_report.pdf
-│
-├── diagrams
-│   └── architecture.png
+│   └── .gitkeep
 │
 ├── docs
 │   ├── ARCHITECTURE.md
@@ -227,8 +252,8 @@ Week 6 - Capstone Project - Multi Agent Research Assistant
 ├── .env.example
 ├── .gitignore
 ├── app.py
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
 ---
@@ -240,7 +265,7 @@ Week 6 - Capstone Project - Multi Agent Research Assistant
 ```bash
 git clone https://github.com/deveshusg/Gen-AI-Assignments.git
 
-cd "Gen-AI-Assignments/Week 6 - Capstone Project - Multi Agent Research Assistant"
+cd week6_multi_agent_research_assistant
 ```
 
 ---
@@ -275,7 +300,7 @@ pip install -r requirements.txt
 
 # Environment Variables
 
-Create a `.env` file:
+Create a `.env` file in the project root.
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
@@ -299,14 +324,6 @@ http://localhost:8501
 
 ---
 
-# Example Query
-
-```text
-Future of Small Language Models
-```
-
----
-
 # Example Workflow
 
 ```text
@@ -319,7 +336,34 @@ Search Agent
 Summarizer Agent
       ↓
 Research Report
+      ↓
+PDF Export
 ```
+
+---
+
+# Example Research Topics
+
+### Artificial Intelligence
+
+* Future of Small Language Models
+* Agentic AI Applications
+* Autonomous AI Systems
+* AI in Financial Services
+
+### Banking & Risk
+
+* AI in Credit Risk Modeling
+* Future of Basel Regulations
+* Generative AI in Banking
+* Explainable AI in Risk Management
+
+### Technology
+
+* Future of Quantum Computing
+* Edge AI Applications
+* Cybersecurity Trends
+* Future of Robotics
 
 ---
 
@@ -333,10 +377,28 @@ This project demonstrates practical understanding of:
 * LangChain
 * State Management
 * Prompt Engineering
-* Tool Calling
+* Tool Integration
 * Web Search Integration
+* LLM Application Development
 * Streamlit Development
-* LLM Application Design
+* PDF Report Generation
+* Workflow Monitoring
+
+---
+
+# Challenges Solved
+
+During development the following challenges were addressed:
+
+* Multi-agent workflow design
+* LangGraph orchestration
+* State management across agents
+* Real-time execution monitoring
+* Web search integration
+* PDF generation
+* Environment variable management
+* Streamlit Cloud deployment
+* File path handling across environments
 
 ---
 
@@ -346,13 +408,15 @@ Potential future improvements include:
 
 * Memory-enabled agents
 * Retrieval-Augmented Generation (RAG)
-* Vector databases
+* Vector database integration
 * PDF upload and analysis
-* Citation verification
 * Fact-checking agent
-* Research history persistence
+* Citation verification
+* Report history persistence
 * Multi-user support
-* Cloud deployment
+* Authentication
+* Cloud database integration
+* Agent collaboration workflows
 
 ---
 
@@ -360,12 +424,32 @@ Potential future improvements include:
 
 **Devesh Gupta**
 
-GitHub: https://github.com/deveshusg
+🌐 Live Application
+https://devesh-research-assistant.streamlit.app/
 
-LinkedIn: https://www.linkedin.com/in/gupta-devesh/
+💻 GitHub
+https://github.com/deveshusg
+
+🔗 LinkedIn
+https://www.linkedin.com/in/gupta-devesh/
 
 ---
 
 # License
 
 This project is intended for educational, learning, and portfolio purposes.
+
+---
+
+## Acknowledgements
+
+This project was built using:
+
+* OpenAI
+* Tavily
+* LangChain
+* LangGraph
+* Streamlit
+* ReportLab
+
+and was developed as the Week 6 Capstone Project in the Gen AI Assignments series.
